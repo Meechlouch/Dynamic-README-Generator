@@ -38,8 +38,8 @@ const promptUser = () =>
     },
     {
       type: "checkbox",
-      message: "Please choose a license.",
-      choices: ["Apache", "MIT", "ISC", "GNU GPLv3"],
+      message: "Please choose a license. Press Space Bar to select, then press enter to confirm.",
+      choices: ["apache", "mit", "isc", "gnu%20gplv3"],
       name: "license",
     },
     {
@@ -57,9 +57,14 @@ const promptUser = () =>
       message: "What is your email address?",
       name: "email",
     },
+    {
+      type: "input",
+      message: "What is the name of the GitHub Repository for this project? Use dash/hyphen for spaces!",
+      name: "repo",
+    },
   ]);
 
 promptUser()
   .then((answers) => writeFileAsync("README.md", generateReadMe(answers)))
-  .then(() => console.log("Successfully generated READ.md file"))
+  .then(() => console.log("Successfully generated README.md file"))
   .catch((err) => console.error(err));

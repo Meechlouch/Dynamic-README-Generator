@@ -11,7 +11,7 @@ function generateMarkdown(answers) {
 
   # Table of Contents
 
-  - [Description](description)
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
@@ -20,23 +20,30 @@ function generateMarkdown(answers) {
   - [License](#license)
   - [Questions](#questions)
 
-  ## Description:
-    ${answers.description}
   ## Installation:
     ${answers.installation}
+
   ## Usage:
     ${answers.usage}
+
   ## Contributing:
     ${answers.contribution}
+
   ## Test:
     ${answers.test}
+
   ## Credits:
     ${answers.credit}
+
   ## License:
-  ![License: ${answers.license ? answers.license : "None"}](https://img.shields.io/badge/License-${
+  This project is subject to ![License: ${
     answers.license ? answers.license : "None"
-  }-red)
-  ![License](https://choosealicense.com/licenses/${answers.license}/)`;
+  }](https://img.shields.io/badge/License-${answers.license ? answers.license : "None"}-red)
+
+  ## Questions:
+  For additional questions, Get in touch at: ${answers.email}\n
+  Check out my [GitHub](https://github.com/${answers.username})
+  GitHub [Repository](https://github.com/${answers.username}/${answers.repo});`;
 }
 
 module.exports = generateMarkdown;
