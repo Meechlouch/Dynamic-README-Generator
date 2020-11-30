@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fileSystem = require("fs");
 const util = require("util");
-//const generateReadMe = require("./utils/generateMarkdown");
+const generateReadMe = require("./utils/generateMarkdown");
 const writeFileAsync = util.promisify(fileSystem.writeFile);
 
 const promptUser = () =>
@@ -59,38 +59,7 @@ const promptUser = () =>
     },
   ]);
 
-// function to generate markdown for README
-function generateMarkdown(answers) {
-  return `# ${answers.title}
-    # Table of Contents
-  
-    - [Description](description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Contributing](#contributing)
-    - [Test](#test)
-    - [Credits](#credits)
-    - [License](#license)
-    - [Questions](#questions)
-  
-    ## Description:
-      ${answers.description}
-    ## Installation:
-      ${answers.installation}
-    ## Usage:
-      ${answers.usage}
-    ## Contributing:
-      ${answers.contribution}
-    ## Test:
-      ${answers.test}
-    ## Credits:
-      ${answers.credit}
-    ## License:
-      ${answers.license}
-      [License](https://choosealicense.com/licenses/${answers.license}/)`;
-}
-
 promptUser()
-  .then((answers) => writeFileAsync("README.md", generateMarkdown(answers)))
+  .then((answers) => writeFileAsync("README.md", generateReadMe(answers)))
   .then(() => console.log("Successfully generated READ.md file"))
   .catch((err) => console.error(err));

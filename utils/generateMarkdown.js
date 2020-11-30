@@ -1,6 +1,14 @@
 // function to generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.title}
+  
+  ![License: ${answers.license ? answers.license : "None"}](https://img.shields.io/badge/Demetri%20Dillard-${
+    answers.license ? answers.license : "None"
+  }-brightgreen)
+
+  ## Description:
+    ${answers.description}
+
   # Table of Contents
 
   - [Description](description)
@@ -25,8 +33,10 @@ function generateMarkdown(answers) {
   ## Credits:
     ${answers.credit}
   ## License:
-    ${answers.license}
-    [License](https://choosealicense.com/licenses/${answers.license}/)`;
+  ![License: ${answers.license ? answers.license : "None"}](https://img.shields.io/badge/License-${
+    answers.license ? answers.license : "None"
+  }-red)
+  ![License](https://choosealicense.com/licenses/${answers.license}/)`;
 }
 
 module.exports = generateMarkdown;
