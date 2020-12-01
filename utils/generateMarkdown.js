@@ -2,12 +2,7 @@
 function generateMarkdown(answers) {
   return `# ${answers.title}
   
-  ![License: ${answers.license ? answers.license : "None"}](https://img.shields.io/badge/Demetri%20Dillard-${
-    answers.license ? answers.license : "None"
-  }-brightgreen)
-
-  ## Description:
-    ${answers.description}
+  ![License:](https://img.shields.io/badge/Demetri%20Dillard-${answers.license ? answers.license : "None"}-brightgreen)
 
   # Table of Contents
 
@@ -19,6 +14,9 @@ function generateMarkdown(answers) {
   - [Credits](#credits)
   - [License](#license)
   - [Questions](#questions)
+
+  ## Description
+    ${answers.description}
 
   ## Installation:
     ${answers.installation}
@@ -36,9 +34,9 @@ function generateMarkdown(answers) {
     ${answers.credit}
 
   ## License:
-  This project is subject to ![License: ${
+  This project is subject to ![License:](https://img.shields.io/badge/License-${
     answers.license ? answers.license : "None"
-  }](https://img.shields.io/badge/License-${answers.license ? answers.license : "None"}-red)
+  }-red)
 
   ## Questions:
   For additional questions, Get in touch at: ${answers.email}\n
