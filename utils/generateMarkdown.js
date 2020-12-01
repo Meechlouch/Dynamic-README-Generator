@@ -40,7 +40,7 @@ function generateMarkdown(answers) {
 
   ## Questions:
   For additional questions, Get in touch at: ${answers.email}\n
-  Check out my [GitHub](https://github.com/${answers.username})
+  Check out my [GitHub](https://github.com/${answers.username})\n
   GitHub [Repository](https://github.com/${answers.username}/${answers.repo});`;
 }
 

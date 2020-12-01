@@ -39,7 +39,7 @@ const promptUser = () =>
     {
       type: "checkbox",
       message: "Please choose a license. Press Space Bar to select, then press enter to confirm.",
-      choices: ["apache", "mit", "isc", "gnu%20gplv3"],
+      choices: ["Apache", "MIT", "ISC", "GNU%20GPLV3"],
       name: "license",
     },
     {
