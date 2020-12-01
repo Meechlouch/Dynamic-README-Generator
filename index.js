@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fileSystem = require("fs");
 const util = require("util");
 const generateReadMe = require("./utils/generateMarkdown");
-const writeFileAsync = util.promisify(fileSystem.writeFile);
+const writeTheFile = util.promisify(fileSystem.writeFile);
 
 const promptUser = () =>
   inquirer.prompt([
@@ -18,7 +18,7 @@ const promptUser = () =>
     },
     {
       type: "input",
-      message: "What are the installation instructions for this project. Write NONE if doesn't apply!",
+      message: "What installs was necessary for this application?. Write NONE if doesn't apply!",
       name: "installation",
     },
     {
@@ -65,6 +65,6 @@ const promptUser = () =>
   ]);
 
 promptUser()
-  .then((answers) => writeFileAsync("README.md", generateReadMe(answers)))
+  .then((answers) => writeTheFile("README.md", generateReadMe(answers)))
   .then(() => console.log("Successfully generated README.md file"))
   .catch((err) => console.error(err));
