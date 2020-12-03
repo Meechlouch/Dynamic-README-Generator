@@ -19,7 +19,8 @@ function generateMarkdown(answers) {
   ${answers.description}\n
   Here is a [video](https://drive.google.com/file/d/1uRDHmz4OBj7ja9dvcLL4FXE7QSQOKxrG/view?usp=sharing) description.\n
   <img src="./img/nodeIndexCommand.png" width="500">
-  <img src="./img/userPrompts.png" width="500">
+  <img src="./img/userPrompts.png" width="500">\n
+
   ## Installation:
     ${answers.installation}
 
