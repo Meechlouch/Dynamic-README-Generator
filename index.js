@@ -38,7 +38,7 @@ const promptUser = () =>
     },
     {
       type: "list",
-      message: "Please choose a license. Press Space Bar to select, then press enter to confirm.",
+      message: "Please choose a license. Use arrow keys to navigate, Press enter to confirm.",
       choices: ["Apache", "MIT", "ISC", "Unlicense"],
       name: "license",
     },
@@ -65,6 +65,8 @@ const promptUser = () =>
   ]);
 
 promptUser()
-  .then((answers) => writeTheFile("README1.md", generateReadMe(answers)))
+  .then((answers) => {
+    return writeTheFile("README.md", generateReadMe(answers));
+  })
   .then(() => console.log("Successfully generated README.md file"))
   .catch((err) => console.error(err));
