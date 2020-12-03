@@ -36,7 +36,7 @@
   This project is subject to ![License:](https://img.shields.io/badge/License-MIT-red)
 
 
-  For more information on this [Licesnse](https://choosealicense.com/licenses/mit/)
+  For more information on this [License](https://choosealicense.com/licenses/mit/)
 
   ## Questions:
   For additional questions, Get in touch at: Meechlouch@gmail.com
