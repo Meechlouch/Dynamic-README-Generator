@@ -17,7 +17,9 @@ function generateMarkdown(answers) {
 
   ## Description
   ${answers.description}\n
-  Here is a [video](https://drive.google.com/file/d/1uRDHmz4OBj7ja9dvcLL4FXE7QSQOKxrG/view?usp=sharing) description.
+  Here is a [video](https://drive.google.com/file/d/1uRDHmz4OBj7ja9dvcLL4FXE7QSQOKxrG/view?usp=sharing) description.\n
+  <img src="./img/nodeIndexCommand.png" width="500">
+  <img src="./img/userPrompts.png" width="500">
   ## Installation:
     ${answers.installation}
 
@@ -38,7 +40,7 @@ function generateMarkdown(answers) {
     answers.license ? answers.license : "None"
   }-red)\n
 
-  For more information on this [Licesnse](https://choosealicense.com/licenses/${answers.license.toLowerCase()}/)
+  For more information on this [License](https://choosealicense.com/licenses/${answers.license.toLowerCase()}/)
 
   ## Questions:
   For additional questions, Get in touch at: ${answers.email}\n
