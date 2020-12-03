@@ -1,6 +1,5 @@
 // function to generate markdown for README
 function generateMarkdown(answers) {
-  console.log(answers.license);
   return `# ${answers.title}
   
   ![License:](https://img.shields.io/badge/Demetri%20Dillard-${answers.license ? answers.license : "None"}-brightgreen)
@@ -17,8 +16,8 @@ function generateMarkdown(answers) {
   - [Questions](#questions)
 
   ## Description
-    ${answers.description}
-
+  ${answers.description}\n
+  Here is a [video](https://drive.google.com/file/d/1uRDHmz4OBj7ja9dvcLL4FXE7QSQOKxrG/view?usp=sharing) description.
   ## Installation:
     ${answers.installation}
 
@@ -44,7 +43,7 @@ function generateMarkdown(answers) {
   ## Questions:
   For additional questions, Get in touch at: ${answers.email}\n
   Check out my [GitHub](https://github.com/${answers.username})\n
-  GitHub [Repository](https://github.com/${answers.username}/${answers.repo});`;
+  GitHub [Repository](https://github.com/${answers.username}/${answers.repo})\n`;
 }
 
 module.exports = generateMarkdown;
