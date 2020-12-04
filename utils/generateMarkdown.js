@@ -1,5 +1,5 @@
 // function to generate markdown for README
-function generateMarkdown(answers) {
+function generateMarkdown(answers, licenseData) {
   return `# ${answers.title}
   
   ![License:](https://img.shields.io/badge/Demetri%20Dillard-${answers.license ? answers.license : "None"}-brightgreen)
@@ -41,7 +41,7 @@ function generateMarkdown(answers) {
   This project is subject to ![License:](https://img.shields.io/badge/License-${
     answers.license ? answers.license : "None"
   }-red)\n
-
+  ${licenseData}
   For more information on this [License](https://choosealicense.com/licenses/${answers.license.toLowerCase()}/)
 
   ## Questions:

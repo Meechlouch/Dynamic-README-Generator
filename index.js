@@ -1,8 +1,9 @@
 const inquirer = require("inquirer");
 const fileSystem = require("fs");
 const util = require("util");
-const generateReadMe = require("./utils/generateMarkdown");
 const writeTheFile = util.promisify(fileSystem.writeFile);
+const getLicense = require("./utils/getLicense");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const promptUser = () =>
   inquirer.prompt([
@@ -66,7 +67,8 @@ const promptUser = () =>
 
 promptUser()
   .then((answers) => {
-    return writeTheFile("README.md", generateReadMe(answers));
+    const licenseData = getLicense(answers);
+    return writeTheFile("README.md", generateMarkdown(answers, licenseData));
   })
   .then(() => console.log("Successfully generated README.md file"))
   .catch((err) => console.error(err));
