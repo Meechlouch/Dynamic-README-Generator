@@ -17,7 +17,7 @@
 
 As a programmer, I would like to focus more time on coding an application but do not want to ignore the importance of a
 good README.md file. This application will generate a clean and professional README.md file based on a users input,
-prompted with a series of questions from the command=line, initialized by the "node index.js" command.
+prompted with a series of questions from the command-line, initialized by the "node index.js" command.
 
   <img src="./img/nodeIndexCommand.png" width="500">
 
