@@ -23,7 +23,7 @@ prompted with a series of questions from the command=line, initialized by the "n
 
   <img src="./img/userPrompts.png" width="500">
 
-Here is a [video](https://drive.google.com/file/d/1uRDHmz4OBj7ja9dvcLL4FXE7QSQOKxrG/view?usp=sharing) description.
+Here is a [video](https://meechlouch.github.io/Dynamic-README-Generator/) description.
 
 ## Installation:
 
